@@ -13,8 +13,8 @@ jobs:
     - name: build
       run: |
         cd $env:GITHUB_WORKSPACE
-        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" || exit \b
-        cmake --build build --config Release -j2 || exit \b
+        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" || exit /b
+        cmake --build build --config Release -j2 || exit /b
 
     - uses: actions/upload-artifact@v2
       with:
