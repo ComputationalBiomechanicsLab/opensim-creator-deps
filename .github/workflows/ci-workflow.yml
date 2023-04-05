@@ -22,8 +22,6 @@ jobs:
         path: install/*
         if-no-files-found: error
 
-    # TODO: upload
-
   ubuntu2004:
     name: Build on Ubuntu 20.04
     runs-on: ubuntu-20.04
@@ -36,6 +34,9 @@ jobs:
     - name: install mesa (OpenGL support)
       run: |
         sudo apt-get install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
+
+    - name: install libgtk-3-dev (nativefiledialog)
+      run: sudo apt-get install libgtk-3-dev
 
     - name: build
       run: |
