@@ -14,7 +14,7 @@ jobs:
       run: |
         cd $env:GITHUB_WORKSPACE
         cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" || exit \b
-        cmake --build build -j2 || exit \b
+        cmake --build build --config Release -j2 || exit \b
 
     - uses: actions/upload-artifact@v2
       with:
@@ -42,7 +42,7 @@ jobs:
       run: |
         set -xeuo pipefail
         cd $GITHUB_WORKSPACE
-        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install"
+        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" -DCMAKE_BUILD_TYPE=Release
         cmake --build build -j$(nproc)
 
     - uses: actions/upload-artifact@v2
@@ -64,7 +64,7 @@ jobs:
       run: |
         set -xeuo pipefail
         cd $GITHUB_WORKSPACE
-        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install"
+        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" -DCMAKE_BUILD_TYPE=Release
         cmake --build build -j$(sysctl -n hw.physicalcpu)
 
     - uses: actions/upload-artifact@v2
