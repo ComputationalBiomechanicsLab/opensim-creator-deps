@@ -16,6 +16,12 @@ jobs:
         cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" || exit \b
         cmake --build build -j%NUMBER_OF_PROCESSORS% || exit \b
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: opensim-creator-deps_amd64_windows.zip
+        path: install/*
+        if-no-files-found: error
+
     # TODO: upload
 
   ubuntu2004:
@@ -34,6 +40,12 @@ jobs:
         cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install"
         cmake --build build -j$(nproc)
 
+    - uses: actions/upload-artifact@v2
+      with:
+        name: opensim-creator-deps_amd64_linux.tar.gz
+        path: install/*
+        if-no-files-found: error
+
   macCatalina:
     name: Build on Mac (catalina)
     runs-on: macos-11
@@ -49,3 +61,9 @@ jobs:
         cd $GITHUB_WORKSPACE
         cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install"
         cmake --build build -j$(sysctl -n hw.physicalcpu)
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: opensim-creator-deps_amd64_macos.tar.gz
+        path: install/*
+        if-no-files-found: error
