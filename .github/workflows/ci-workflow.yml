@@ -1,0 +1,51 @@
+on: [push]
+
+jobs:
+  windows:
+    name: Build on Windows
+    runs-on: windows-2022
+    steps:
+
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: build
+      run: |
+        cd $env:GITHUB_WORKSPACE
+        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install" || exit \b
+        cmake --build build -j%NUMBER_OF_PROCESSORS% || exit \b
+
+    # TODO: upload
+
+  ubuntu2004:
+    name: Build on Ubuntu 20.04
+    runs-on: ubuntu-20.04
+    steps:
+
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: build
+      run: |
+        set -xeuo pipefail
+        cd $GITHUB_WORKSPACE
+        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install"
+        cmake --build build -j$(nproc)
+
+  macCatalina:
+    name: Build on Mac (catalina)
+    runs-on: macos-11
+    steps:
+
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
+
+    - name: run build script
+      run: |
+        set -xeuo pipefail
+        cd $GITHUB_WORKSPACE
+        cmake -S . -B build -DCMAKE_INSTALL_PREFIX="install"
+        cmake --build build -j$(sysctl -n hw.physicalcpu)
