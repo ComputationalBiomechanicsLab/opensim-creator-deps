@@ -1,0 +1,45 @@
+[submodule "ImGuizmo"]
+	path = ImGuizmo
+	url = https://github.com/ComputationalBiomechanicsLab/ImGuizmo
+[submodule "implot"]
+	path = implot
+	url = https://github.com/ComputationalBiomechanicsLab/implot
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/ComputationalBiomechanicsLab/googletest
+[submodule "glm"]
+	path = glm
+	url = https://github.com/ComputationalBiomechanicsLab/glm
+[submodule "imgui"]
+	path = imgui
+	url = https://github.com/ComputationalBiomechanicsLab/imgui
+[submodule "nativefiledialog"]
+	path = nativefiledialog
+	url = https://github.com/ComputationalBiomechanicsLab/nativefiledialog
+[submodule "SDL"]
+	path = SDL
+	url = https://github.com/ComputationalBiomechanicsLab/SDL
+[submodule "span-lite"]
+	path = span-lite
+	url = https://github.com/ComputationalBiomechanicsLab/span-lite
+[submodule "stb"]
+	path = stb
+	url = https://github.com/ComputationalBiomechanicsLab/stb
+[submodule "tomlplusplus"]
+	path = tomlplusplus
+	url = https://github.com/ComputationalBiomechanicsLab/tomlplusplus
+[submodule "IconFontCppHeaders"]
+	path = IconFontCppHeaders
+	url = https://github.com/ComputationalBiomechanicsLab/IconFontCppHeaders
+[submodule "opensim-core"]
+	path = opensim-core
+	url = https://github.com/ComputationalBiomechanicsLab/opensim-core
+[submodule "lunasvg"]
+	path = lunasvg
+	url = https://github.com/ComputationalBiomechanicsLab/lunasvg
+[submodule "benchmark"]
+	path = benchmark
+	url = https://github.com/ComputationalBiomechanicsLab/benchmark
+[submodule "unordered_dense"]
+	path = unordered_dense
+	url = https://github.com/ComputationalBiomechanicsLab/unordered_dense
