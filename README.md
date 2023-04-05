@@ -1,4 +1,4 @@
-# OpenSim Creator: Dependencies <img src="textures/logo.svg" align="right" alt="OpenSim Creator Logo" width="128" height="128" />
+# OpenSim Creator: Dependencies <img src="resources/logo.svg" align="right" alt="OpenSim Creator Logo" width="128" height="128" />
 
 > A collection of build scripts/patches for building OpenSim Creator's dependencies.
 
