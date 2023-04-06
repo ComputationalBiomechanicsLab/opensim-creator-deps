@@ -18,7 +18,7 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: opensim-creator-deps_amd64_windows.zip
+        name: opensim-creator-deps_amd64_windows
         path: install/*
         if-no-files-found: error
 
@@ -47,7 +47,7 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: opensim-creator-deps_amd64_linux.tar.gz
+        name: opensim-creator-deps_amd64_linux
         path: install/*
         if-no-files-found: error
 
@@ -69,6 +69,6 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        name: opensim-creator-deps_amd64_macos.tar.gz
+        name: opensim-creator-deps_amd64_macos
         path: install/*
         if-no-files-found: error
